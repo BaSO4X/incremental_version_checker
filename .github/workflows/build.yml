@@ -18,7 +18,7 @@ jobs:
 
       - name: 提取增量版本号
         run: |
-          sudo bash "$GITHUB_WORKSPACE"/make.sh ${{ github.event.inputs.URL }} $GITHUB_ENV $GITHUB_WORKSPACE
+          sudo bash ./make.sh ${{ github.event.inputs.URL }} $GITHUB_ENV
 
       - name: 发布到 Github Release
         uses: ncipollo/release-action@main
