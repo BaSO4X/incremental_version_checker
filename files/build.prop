@@ -1,0 +1,191 @@
+# 
+persist.sys.adaptive_hdr_supported=true
+persist.sys.stability.PrereadEnable=false
+persist.sys.enable_rtmode=true
+persist.sys.enhance_vkpipelinecache.enable=false
+persist.miui.density_v2=580
+ro.sf.lcd_density=580
+ro.audio.stereo_spatialization_enabled=true
+persist.sys.support_ultra_hdr=true
+
+#bluetooth
+persist.bluetooth.a2dp_offload.cap=sbc-aac-ldac-lhdcv3-lhdcv5-mihc
+bluetooth.ums_offload.cap=lc3-lhdcv5
+persist.vendor.bluetooth.supportopphdt=yes
+persist.vendor.bluetooth.supportblehdtabr=yes
+persist.vendor.bluetooth.supportleahdt=no
+persist.vendor.bluetooth.supportleaabr=no
+bluetooth.profile.sap.server.enabled=false
+vendor.bluetooth.ldac.abr=true
+vendor.bluetooth.lhdc_codec.supported=true
+vendor.bluetooth.a2dp_over_mhdt.supported=true
+
+# Log
+ro.logd.size=64K
+ro.lmk.debug=false
+ro.kernel.checkjni=0
+log.tag.stats_log=OFF
+ro.logd.size.stats=64K
+persist.logd.limit=OFF
+persist.logd.size=65536
+ro.logdumpd.enabled=0
+persist.logd.size.crash=1M
+persist.logd.size.radio=1M
+persist.logd.size.system=1M
+persist.mm.enable.prefetch=false
+persist.sys.offlinelog.logcat=false
+persist.sys.offlinelog.kernel=false
+persist.sys.offlinelog.logcatkernel=false
+persist.wpa_supplicant.debug=false
+ro.kernel.android.checkjni=0
+sys.miui.ndcd=off
+persist.vendor.ssr.enable_ramdumps=0
+ro.vendor.mtk_gwsd_capability=2
+persist.vendor.log.tel_log_ctrl=1
+
+# 游戏三倍速
+debug.game.video.support=true
+debug.game.video.speed=true
+
+ro.surface_flinger.supports_background_blur=1
+
+# 刷新率优化
+ro.surface_flinger.enable_frame_rate_override=false
+ro.vendor.display.type=oled
+ro.vendor.fps.switch.default=true
+ro.vendor.display.default_fps=60
+ro.vendor.display.idle_default_fps=60
+ro.vendor.display.idle_default_fps.support=true
+ro.vendor.display.fod_monitor_default_fps=120
+ro.vendor.fps.switch.thermal=true
+ro.vendor.display.dynamic_refresh_rate=120,90,60,30:100,60,5
+ro.vendor.display.primary_idle_refresh_rate=60,10:528
+persist.vendor.disable_idle_fps=true
+persist.vendor.disable_idle_fps.threshold=528
+ro.vendor.mi_sf.aod_mode_ddic_refresh_rate=10
+vendor.mi_sf.enable_second_refresh_rate_overlay=1
+ro.vendor.display.set_fps_stat_timer_ms=250
+ro.vendor.audio.game.effect=true
+ro.vendor.nfc.dispatch_optim=2
+
+# 快充加速
+persist.vendor.accelerate.charge=true
+
+#音频优化/哈曼卡顿/新版NFC页面
+ro.vendor.audio.sfx.audiovisual=true
+ro.vendor.video_box.version=2
+ro.vendor.audio.surround.headphone.only=false
+ro.vendor.audio.videobox.switch=true
+ro.vendor.audio.feature.spatial=7
+debug.config.media.video.frc.support=true
+debug.config.media.video.ais.support=true
+debug.config.media.video.aie.support=true
+persist.vendor.vcb.ability=true
+ro.vendor.media.video.frc.support=true
+ro.vendor.media.video.vpp.support=true
+ro.miui.shell_anim_enable_fcb=true
+
+#REDMI Market Name
+ro.product.marketname=REDMI K50
+
+# AOD的调试属性
+ro.vendor.sf.detect.aod.enable=true
+
+# 启用澎湃2.0音乐触感
+ro.odm.mm.vibrator.audio_haptic_support=true
+sys.haptic.media=true
+sys.haptic.lowPowerMode=true
+sys.haptic.onetrack=true
+sys.haptic.dynamiceffect.richtap.version=2.0
+
+# 音频缩放类型
+ro.vendor.audio.zoom.type=2
+
+#支持游戏音频模式
+ro.vendor.audio.game.mode=true
+
+#杜比视界
+ro.vendor.display.dolbyvision.support=true
+
+#支持扬声器空间音频
+ro.vendor.audio.spatializer.support.speaker=true
+
+#小米空间音频技术
+vendor.audio.useXiaomiSpatializer=true
+
+# NFC新UI
+ro.vendor.nfc.wallet_fusion=1
+
+#扬声器清理
+ro.vendor.audio.clean_speaker=true
+
+#高精度定位
+persist.vendor.gnss.hpLocSetUI=true
+
+#音质音效
+ro.vendor.audio.fweffect=true
+ro.vendor.audio.bose.effect.enable=true
+
+# 哈曼卡顿
+ro.vendor.audio.sfx.harmankardon=true
+
+#贴贴分享
+ro.vendor.nfc.mitouch=1
+
+# Enable FUSE passthrough for better performance
+persist.sys.fuse.passthrough.enable=true
+
+# Enable process killing for memory management
+persist.sys.spc.kill.proc.enable=true
+
+# Disable SurfaceFlinger backpressure
+debug.sf.disable_backpressure=1
+
+# Enable app heap memory optimization
+persist.sys.memory_standard.appheap.enable=true
+
+# Set memory handling interval to 300 seconds
+persist.sys.memory_standard.handle.time=300000
+
+# Set big cores for animator scheduler
+persist.sys.miui_animator_sched.bigcores=4-6
+
+ro.miui.affinity.sfui=4-7
+ro.miui.affinity.sfre=4-7
+ro.miui.affinity.sfuireset=4-7
+
+# Set system UI cores
+persist.sys.miui.sf_cores=4-7
+
+# Set big prime cores for animator scheduler
+persist.sys.miui_animator_sched.big_prime_cores=4-7
+
+# Enable temperature limit
+persist.sys.enable_templimit=true
+
+# Default memory management watermarks
+persist.sys.minfree_def=73728,92160,110592,154832,482560,579072
+
+# Memory management watermarks for 6GB RAM
+persist.sys.minfree_6g=73728,92160,110592,258048,663552,903168
+
+# Memory management watermarks for 8GB RAM
+persist.sys.minfree_8g=73728,92160,110592,340000,765000,967680
+
+# Memory management watermarks for 12GB RAM
+persist.sys.minfree_12g=73728,92160,110592,154832,482560,579072
+
+# Enable extended metadata optimization
+persist.miui.extm.dm_opt.enable=true
+
+# Enable multithreaded Dex layout
+persist.sys.multithreaded.dexlayout.enable=true
+dalvik.vm.default-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5
+dalvik.vm.background-dex2oat-cpu-set=0,1,2,3,4,5
+persist.sys.perf_scenario_recognition.plugin.device.codelist=4,5
+persist.vendor.display.miui.composer_boost=4-7
+
+persist.sys.transition_rt.enable=true
+persist.sys.transition_beginSchedThreads.enable=true
+
