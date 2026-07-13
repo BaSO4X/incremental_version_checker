@@ -27,7 +27,7 @@ mkdir -p "$GITHUB_WORKSPACE"/images
 mkdir -p "$GITHUB_WORKSPACE"/Extra_dir
 $payload_extract -s -o "$GITHUB_WORKSPACE"/Extra_dir/ -i "${URL}" -X mi_ext -T0
 cd "$GITHUB_WORKSPACE"/images
-sudo $erofs_extract -i "$GITHUB_WORKSPACE"/Extra_dir/$i.img -x -s
+sudo $erofs_extract -i "$GITHUB_WORKSPACE"/Extra_dir/mi_ext.img -x -s
 echo -e "${Green}- 提取完成"
 
 # 读取增量版本号
