@@ -1,0 +1,35 @@
+name: Check Incremental Version
+
+on:
+  workflow_dispatch:
+    inputs:
+      URL:
+        description: "ROM 包下载地址"
+        required: true
+
+jobs:
+  build:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库文件
+        uses: actions/checkout@main
+
+      - name: 准备所需环境
+        run: |
+          sudo apt-get install p7zip-full -y
+
+      - name: 提取增量版本号
+        run: |
+          sudo bash "$GITHUB_WORKSPACE"/make.sh ${{ github.event.inputs.URL }} $GITHUB_ENV $GITHUB_WORKSPACE
+
+      - name: 发布到 Github Release
+        uses: ncipollo/release-action@main
+        with:
+          name: ${{ env.rom_os_version }}
+          tag: ${{ env.rom_os_version }}
+          body: |
+            增量版本号: ${{ env.incremental_version }}
+          allowUpdates: true
+          token: ${{ secrets.GITHUB_TOKEN }}
