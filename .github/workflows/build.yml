@@ -16,6 +16,10 @@ jobs:
       - name: 检出仓库文件
         uses: actions/checkout@main
 
+      - name: 准备所需环境
+        run: |
+          sudo apt-get install erofs-utils -y
+
       - name: 提取增量版本号
         run: |
           sudo bash "$GITHUB_WORKSPACE"/make.sh ${{ github.event.inputs.URL }} $GITHUB_ENV $GITHUB_WORKSPACE
