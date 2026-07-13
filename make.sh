@@ -9,7 +9,15 @@ Yellow='\033[1;33m' # 粗体黄色
 Blue='\033[1;34m'   # 粗体蓝色
 Green='\033[1;32m'  # 粗体绿色
 
+magiskboot="$GITHUB_WORKSPACE"/tools/magiskboot
+a7z="$GITHUB_WORKSPACE"/tools/7zzs
+ksud="$GITHUB_WORKSPACE"/tools/lkm_patch/ksud
 payload_extract="$GITHUB_WORKSPACE"/tools/payload_extract
+mke2fs="$GITHUB_WORKSPACE"/tools/mke2fs
+e2fsdroid="$GITHUB_WORKSPACE"/tools/e2fsdroid
+erofs_extract="$GITHUB_WORKSPACE"/tools/extract.erofs
+erofs_mkfs="$GITHUB_WORKSPACE"/tools/mkfs.erofs
+lpmake="$GITHUB_WORKSPACE"/tools/lpmake
 
 mkdir -p "$GITHUB_WORKSPACE"/tools
 chmod -R 755 "$GITHUB_WORKSPACE"/tools
