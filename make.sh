@@ -26,8 +26,8 @@ echo -e "${Red}- 开始提取 mi_ext 分区"
 mkdir -p "$GITHUB_WORKSPACE"/images
 mkdir -p "$GITHUB_WORKSPACE"/Extra_dir
 $payload_extract -s -o "$GITHUB_WORKSPACE"/Extra_dir/ -i "${URL}" -X mi_ext -T0
-mkdir -p "$GITHUB_WORKSPACE"/images/mi_ext
-sudo fsck.erofs --extract="$GITHUB_WORKSPACE"/images/mi_ext "$GITHUB_WORKSPACE"/Extra_dir/mi_ext.img
+cd "$GITHUB_WORKSPACE"/images
+sudo $erofs_extract -i "$GITHUB_WORKSPACE"/Extra_dir/mi_ext.img -x -s
 echo -e "${Green}- 提取完成"
 
 # 读取增量版本号
