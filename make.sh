@@ -24,7 +24,10 @@ model=$(echo "$rom_zip_name" | cut -d'-' -f1 | head -n 1 | tr -d '\r')
 # 直接从 URL 提取 mi_ext 分区（无需下载完整 ROM）
 echo -e "${Red}- 开始提取 mi_ext 分区"
 mkdir -p "$GITHUB_WORKSPACE"/images
-$payload_extract -s -o "$GITHUB_WORKSPACE"/images/ -i "${URL}" -X mi_ext -T0
+mkdir -p "$GITHUB_WORKSPACE"/Extra_dir
+$payload_extract -s -o "$GITHUB_WORKSPACE"/Extra_dir/ -i "${URL}" -X mi_ext -T0
+cd "$GITHUB_WORKSPACE"/images
+sudo $erofs_extract -i "$GITHUB_WORKSPACE"/Extra_dir/$i.img -x -s
 echo -e "${Green}- 提取完成"
 
 # 读取增量版本号
