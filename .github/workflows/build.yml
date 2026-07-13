@@ -26,6 +26,7 @@ jobs:
           name: ${{ env.rom_os_version }}
           tag: ${{ env.rom_os_version }}
           body: |
+            机型代号: ${{ env.model }}
             增量版本号: ${{ env.incremental_version }}
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
